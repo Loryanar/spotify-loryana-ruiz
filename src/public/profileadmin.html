@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style> 
+     .contenedor-derecho {
+    flex: 5;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+   top: 9%;
+    left: 24%;
+  
+  }
+    html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #121314;
+    color: #dfe0e6;
+
+  }
+  
+    *{
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        font-family: 'Poppins',sans-serif;
+    }
+    
+    
+    header{
+        width: 100%;
+    }
+    
+    .navegacion{
+        width: 100%;
+        margin: 0px ;
+        background: rgba(180, 180, 180, 0.712);
+    }
+    
+    .navegacion ul{
+        list-style: none;
+    }
+    
+    .menu > li{
+        position: relative;
+        display: inline-block;
+    }
+    
+    .menu > li > a{
+        display: block;
+        padding: 15px 20px;
+        color: #ebe0e0;
+        
+        text-decoration: none;
+    }
+    
+    .menu li a:hover{
+        color: #8495e6;
+        transition: all .3s;
+    }
+
+    .card {
+  width: 300px;
+  height: 600px;
+  overflow: hidden;
+  position: absolute;
+  top: 57%;
+  left: 12%;
+  transform: translate(-50%, -50%);
+  background: rgb(71, 69, 69);
+  
+  box-shadow: 7px 13px 37px rgba(0, 0, 0, .6);
+}
+section {
+  padding: 10px;
+  overflow: hidden;
+  text-align: center;
+}
+
+section h1 {
+  margin: .5em 0;
+}
+
+section p {
+  margin: 1em 0;
+}
+section li{
+    margin: .5em .2em;
+    list-style: none;
+    
+}
+.container{
+  max-width: 1020px;
+  width: 100%;
+  background-color: rgb(39, 35, 46);
+  padding: 50px 80px;
+  
+ 
+}
+.container .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.container .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  
+} .container ul{
+    list-style: none;
+    display: inline-block;
+    margin: .5em .2em;
+}
+.container ul li a {
+  text-decoration: none;
+  color: white;
+   margin: 20px 0;
+}
+
+.container ul li  {
+    float: left;
+    height: 35px;
+    width: 250px;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size:33px;
+   font-weight: 500;
+   letter-spacing: 4px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   margin: 40px 15px 15px 0;
+   background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+.content ul li:hover {
+  /* transform: scale(0.99); */
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+  }
+  .content{
+    height: 950px;
+    width: 1000px;
+   margin: 35px 0;
+  }
+</style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+ 
+
+</head>
+<body>
+    <header>
+		<nav class="navegacion">
+			<ul class="menu">
+				<li id="como" ><a href="/indexad">Inicio</a></li>
+				
+        <li style="float:right;"><a id="uss" href="/profileadmin"></a></li>
+        
+			</ul>
+		</nav>
+	</header>
+   <div class="contenedor-izquierdo">
+
+   </div> <main class="card">
+  
+
+    <section>
+        
+      <h1 id="tit"></h2>
+      
+    
+      <ul>
+          
+        <li id="em"></li>
+        <li ></li>
+        <li id="na"></li>
+        <li id="ln"></li>
+        <li id="id"></li>
+      </ul>
+    </section>
+
+   
+   
+  </main>
+ </div>
+ <div class="contenedor-derecho">
+    <div class="container">
+        <div class="title">User</div>
+        <div class="content">
+            <ul>
+                <li><a href="/del" >Delete Users</a></li>
+                <li><a href="/updateuser" >Update Users</a></li>
+                <li><a href="/deladmin" >Delete Admin</a></li>
+                <li><a href="/upadm" >Update Admin</a></li>
+              
+                
+              </ul>
+              <form class="upload-form" action="/s" method="POST" >
+                Subir canción:
+
+                <input type="submit" value="Subir">
+              </form>
+        </div>
+      </div>
+      </div>
+      
+    
+   
+
+  <script src="/jquery/jquery.js"></script>
+  <script src="/jquery.cookie/jquery.cookie.js"></script>
+  <script>var help=0;
+    if(help == 0){
+       
+        var cookid= $.cookie('cookieid'); console.log(cookid);
+    var cookname= $.cookie('cookien'); console.log(cookname);
+    var cookln= $.cookie('cookieln'); console.log(cookln);
+    var cooke= $.cookie('cookiee'); console.log(cooke);
+    var name= ""+cookname+ " "+cookln;
+    var hola= document.getElementById("tit").innerHTML = name;
+    var hola= document.getElementById("uss").innerHTML = name;
+    var hola= document.getElementById("em").innerHTML = "Email:  "+ cooke;
+    var hola= document.getElementById("ln").innerHTML ="Last Name:  "+cookln;
+    var hola= document.getElementById("na").innerHTML ="Name:  "+cookname;
+    var hola= document.getElementById("id").innerHTML ="I.D:  "+cookid;
+        help++;
+        console.log(help)
+       
+    }
+        </script>
+</body>
+</html>
