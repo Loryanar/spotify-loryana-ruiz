@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>header{
+      width: 100%;
+  }
+  
+  .navegacion{
+      width: 100%;
+      margin: 0px ;
+      background: rgba(180, 180, 180, 0.712);
+  }
+  
+  .navegacion ul{
+      list-style: none;
+  }
+  
+  .menu > li{
+      position: relative;
+      display: inline-block;
+  }
+  
+  .menu > li > a{
+      display: block;
+      padding: 15px 20px;
+      color: #ebe0e0;
+      
+      text-decoration: none;
+  }
+  
+  .menu li a:hover{
+      color: #8495e6;
+      transition: all .3s;
+  }</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reproductor</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    
+</head>
+<body>
+  <header>
+		<nav class="navegacion">
+			<ul class="menu">
+				<li id="como" ><a href="/stream">Inicio</a></li>
+			
+        <li style="float:right;"><a id="uss" href="/profil">User</a></li>
+        
+			</ul>
+		</nav>
+	</header>
+    <div class="app">
+        <div class="contenedor-izquierdo">
+          <ul class="lista-canciones">
+            <li class="cancion">
+              Cancion 1
+            </li>
+            <li class="cancion">
+              Cancion 2
+            </li>
+          </ul>
+        </div>
+    
+        <div class="contenedor-derecho">
+          <audio class="audio" controls></audio>
+        </div>
+
+      
+<script src="jquery/jquery.js "></script>
+<script src="/js/main.js"></script>
+</body>
+</html>
