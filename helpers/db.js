@@ -4,7 +4,7 @@ const bd = new Pool({
   database: process.env.POSTGRES_DB,
   username: process.env.POSTGRES_USER,
   password: process.env.POSTGRES_PASSWORD,
-  host: process.env.POSTGRES_HOST,
+  host: "ec2-44-194-225-27.compute-1.amazonaws.com",
   port: process.env.POSTGRES_PORT,
   ssl:true,
   dialectOptions: {
